@@ -1,0 +1,11 @@
+  </section>
+</div>
+<script src="/javascripts/lib/swiper/swiper-4.2.2.min.js"></script>
+<script src="/javascripts/global.js"></script>
+<% var js=js||[]; %>
+<% for(let i=0;i<js.length;i++){ %>
+  <script src="/javascripts/<%=js[i] + '?t=' + Date.now();%>"></script>
+<% } %>
+</body>
+
+</html>

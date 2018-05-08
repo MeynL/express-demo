@@ -1,0 +1,84 @@
+<%- include('../common/head')%>
+<%- include('../common/navbar',{title:title})%>
+<section class="scrollview">
+  <div class="store-swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="/images/swiper/1.jpg">
+      </div>
+      <div class="swiper-slide">
+        <img src="/images/swiper/2.jpg">
+      </div>
+      <div class="swiper-slide">
+        <img src="/images/swiper/3.jpg">
+      </div>
+      <div class="swiper-slide">
+        <img src="/images/swiper/1.jpg">
+      </div>
+      <div class="swiper-slide">
+        <img src="/images/swiper/2.jpg">
+      </div>
+      <div class="swiper-slide">
+        <img src="/images/swiper/3.jpg">
+      </div>
+    </div>
+  </div>
+  <div class="tabbar tb-noline">
+    <a href="#" class="tabbar-item">
+      <span class="tabbar-icon">
+        <i class="iconfont" style="color:#3dab9e;">&#xe634;</i>
+      </span>
+      <span class="tabbar-txt">
+        书籍分类
+      </span>
+    </a>
+    <a href="#" class="tabbar-item">
+      <span class="tabbar-icon">
+        <i class="iconfont" style="color:#fbd7e5;">&#xe634;</i>
+      </span>
+      <span class="tabbar-txt">
+        书籍排行
+      </span>
+    </a>
+    <a href="#" class="tabbar-item">
+      <span class="tabbar-icon">
+        <i class="iconfont" style="color:#a7d18f;">&#xe634;</i>
+      </span>
+      <span class="tabbar-txt">
+        二次元漫画
+      </span>
+    </a>
+    <a href="#" class="tabbar-item">
+      <span class="tabbar-icon">
+        <i class="iconfont" style="color:#faaa77;">&#xe634;</i>
+      </span>
+      <span class="tabbar-txt">
+        阅客影视
+      </span>
+    </a>
+  </div>
+
+  <div class="title-txt">
+    <h2 class="txt-lg">热门推荐</h2>
+  </div>
+  
+  <div class="box-list">
+    <% for(let i = 0;i<books.length;i++){ %>
+    <a class="box-list-item">
+      <div class="box-list-img">
+        <img src="<%=books[i].img;%>">
+      </div>
+      <div class="box-list-mes">
+        <div class="box-list-title">
+          <span><%=books[i].name;%></span>
+        </div>
+        <div class="box-list-other"></div>
+      </div>
+    </a>
+    <% } %>
+  </div>
+</section>
+<%- include('../common/tabbottom',{curr:title})%>
+<%- include('../common/foot',{js:[
+  'store/index.js'
+]}) %>
